@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <!-- <div class="jumbotron">
+        <h1>This is our collection of movies</h1>
+        <p>Going to be the best website in world to download</p>
+        <a class="btn btn-success btn-lg" href="/movies/new">Add new</a>
+    </div> -->
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% movies.forEach(function(movie){ %>
+            <div class="col-md-3 col-xs-6">
+                <div class="thumbnail">
+                    <img src="<%= movie.image %>" > 
+                    <div class="caption">
+                        <!-- <h4><%= movie.name %> </h4> -->
+                        <a  class="link" href="/movies/<%= movie._id %>"><%= movie.name %></a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>    
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>

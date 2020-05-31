@@ -1,0 +1,101 @@
+/* div {
+    fo
+} */
+/* 
+.image {
+    width: 100%;
+}  */
+
+/* #movie-border{
+    border: 2px solid black;
+} */
+
+#mari{
+    background-color: #3c3c3c;
+    color: #fff;
+}
+body .navbar{
+    background-color: #2d2d2d;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+body .navbar-default .navbar-brand{
+    color: #fff;
+}
+
+body .navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+
+.title{
+    margin: 0 0 20px;
+}
+
+.asli{
+    background-color:  #222;
+    color: #f2f2f2;
+    padding: 20px 5px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+#show{
+    width: 100%;
+}
+
+#year{
+    font-size: .5em;
+}
+
+.under-border{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+/* 
+.fas star{
+    font-size: 50px;
+    color: yellow;
+} */
+#icon-column{
+    padding: 0;
+    width: 12%;
+}
+
+#star-icon{
+    color:#ffca28;
+}
+
+#rating{
+    z-index: 1;
+    position: relative; 
+    font-size: .3em; 
+    padding-top: 1.2em;
+    color: #222;
+}
+
+#ratandmeta{
+    line-height: 1em;
+    padding: 5px 0 5px 5px;
+}
+
+#actor p{
+    /* line-height: 1.5em; */
+    margin-bottom: 3px;
+}
+
+/* INDEX */
+.link{
+    color: #fff;
+    font-size: 20px;
+}
+
+.row .thumbnail{
+    background-color: #222;
+    border: none;
+    padding: 0;
+}
+
+#download{
+    color: #8ab84d;
+}

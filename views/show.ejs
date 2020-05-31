@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+
+<!-- <h1>This is going to be our show page</h1> -->
+<div class="container" id="movie-border">
+    <div class="row">
+        <!-- for centerising space -->
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8 asli">
+            <div class="col-xs-4">
+                <img id="show" src="<%= data.Poster %>">        
+            </div>
+            <div class="col-xs-8">
+                <h2 class="title"><%= data.Title %><span id="year"> (<%= data.Year %>)</span></h2>
+                <p class="under-border">
+                    <%= data.Runtime %> | <%= data.Genre %> | <%= data.Released %>
+                </p>
+                <div class="col-xs-2" id="icon-column">
+                    <span class="fa-layers fa-fw fa-3x">
+                        <i class="fas fa-star" id="star-icon"></i>
+                        <p id="rating"><%= data.imdbRating %></p>
+                    </span>
+                </div>
+                <div class="col-xs-10" id="ratandmeta">
+                    <p><strong>Rating:</strong> <%= data.imdbRating %> / 10 from <%= data.imdbVotes %> users</p>
+                    <p><strong>Metascore:</strong> <%= data.Metascore %></p>
+                </div>
+                <p class="under-border"><%= data.Plot %></p>
+                <div id="actor">
+                    <p><strong>Director:</strong> <%= data.Director %></p>
+                    <p><strong>Creator:</strong> <%= data.Writer %></p>
+                    <p><strong>Actors:</strong> <%= data.Actors %></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 asli">
+            <div style="float: left;">
+                <i class="fas fa-download fa-3x" id="download"></i>
+                <% links.forEach(function(link){ %>
+                    <p><strong><%= link.resolution %></strong> <%= link.size %></p> 
+                    <a class="btn btn-success" href="<%= link.url %>">Download</a>
+                    <!-- <p>size: </p> -->
+                <%  }); %>              
+            </div>
+   
+        </div>
+        <div class="col-xs-2"></div>
+        </div>
+</div>
+
+
+<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg></script>
+<%- include('partials/footer') %>
