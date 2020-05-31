@@ -1,5 +1,4 @@
 <%- include('partials/header') %>
-<!-- <h1>This is going to be our show page</h1> -->
 <div class="container" id="movie-border">
     <div class="row">
         <!-- for centerising space -->
@@ -44,7 +43,6 @@
                 <% links.forEach(function(link){ %>
                     <p><strong><%= link.resolution %></strong> <%= link.size %></p> 
                     <a class="btn btn-success" href="<%= link.url %>">Download</a>
-                    <!-- <p>size: </p> -->
                 <%  }); %>              
             </div>
    
