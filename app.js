@@ -40,6 +40,4 @@ passport.deserializeUser(User.deserializeUser());
 app.use("/movies", movieRoutes);
 app.use(authRoutes);
 
-app.listen(3000, function(){
-    console.log("SERVER IS RUNNING!!!");
-});
+app.listen(process.env.PORT, process.env.ID);
