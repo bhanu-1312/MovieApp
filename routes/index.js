@@ -10,6 +10,23 @@ router.get("/", function(req, res){
     res.render("home");
 });
 
+// register route
+// render to register page
+router.get("/register", function(req, res){
+    res.render("register");
+});
+
+router.post("/register", function(req, res){
+    User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.redirect("/register");
+        }
+        passport.authenticate("local")(req, res, function(){
+            res.redirect("/secret");
+        });
+    });
+});
 
 // login route
 // render to login page
