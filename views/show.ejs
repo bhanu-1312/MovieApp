@@ -1,5 +1,5 @@
 <%- include('partials/header') %>
-
+id
 <!-- <h1>This is going to be our show page</h1> -->
 <div class="container" id="movie-border">
     <div class="row">
@@ -52,6 +52,9 @@
         </div>
         <div class="col-xs-2"></div>
         </div>
+        <% if(user){ %>
+        <a class="btn btn-danger" href="/movies/<%= movie_id %>/link">New link</a>
+        <% } %>
 </div>
 
 

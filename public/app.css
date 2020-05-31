@@ -99,3 +99,7 @@ body .navbar-default .navbar-nav>li>a{
 #download{
     color: #8ab84d;
 }
+
+.btn-danger{
+    margin: 0 50%;
+}

@@ -10,7 +10,7 @@ router.get("/", function(req, res){
         if(err)
             console.log(err);
         else{
-            res.render("index", {movies : allMovies});
+            res.render("index", {movies : allMovies, user : req.user});
         }
     });
 });
@@ -50,7 +50,7 @@ router.get("/:id", function(req, res){
                 else{
                     var parsedData = JSON.parse(body);
                     foundMovie.populate("links").execPopulate(function(err, movie){
-                        res.render("show", {data: parsedData, links: movie.links});    
+                        res.render("show", {data: parsedData, links: movie.links, user: req.user, movie_id: foundMovie._id});    
                     });
                 }
             });

@@ -20,6 +20,8 @@
         <% }); %>    
     </div>
 </div>
-
+<% if(user){ %>
+        <a class="btn btn-danger" href="/movies/new">New</a>
+<% } %>
 
 <%- include('partials/footer') %>
