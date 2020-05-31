@@ -14,7 +14,8 @@ var express        = require("express"),
 var movieRoutes    = require("./routes/movies"),
     authRoutes     = require("./routes/index");
 
-var URI = "mongodb://localhost:27017/movie_app4";
+// var URI = "mongodb://localhost:27017/movie_app4";
+var URI = "mongodb+srv://rana:rana@movieapp-wu0z2.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(URI, {useNewUrlParser: true,useUnifiedTopology: true});
 
